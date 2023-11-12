@@ -1,0 +1,30 @@
+
+
+.header {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 15px;
+    background-color: #364694;
+    color: white;
+    border-radius: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #4f61bc; 
+    transform: scale(1.1)
+}

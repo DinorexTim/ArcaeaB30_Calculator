@@ -1,0 +1,248 @@
+body {
+    background-color: #1e2237; 
+    color: white;
+    font-family: Arial, sans-serif;
+}
+#capture{
+    background-image: url('/images/arcaea/b30.png');
+    background-size: auto;
+    background-repeat: repeat; 
+    filter: blur(20px);
+}
+.grid-very-wide{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 20px;
+    justify-items: center
+}
+
+.grid-wide{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px;
+    justify-items: center
+}
+
+.grid-narrow{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+    justify-items: center
+}
+
+.grid-very-narrow{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px;
+    justify-items: center
+}
+
+.grid-item {
+    border-radius: 20px;
+    padding: 10px;
+    width: 147px;
+}
+
+.header{
+    margin-left: 5%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+  
+.avatar img {
+    width: 100%;
+} 
+
+#avatar{
+    transition: transform 0.3s ease-in-out;
+}
+#avatar.enlarged{
+    transform: scale(1.1)
+}
+
+#avatar-selection{
+    position: absolute;
+    display: none;
+    margin: 10px;
+    top: 120px;
+    left: 20px;
+    z-index: 9999;
+    height: 200px;
+    width: 190px;
+    background-color: #1e2963;
+    border-radius: 15px;
+    overflow-y: scroll;
+    padding: 5px;
+    border: #d1d5db 2px solid;
+}
+
+#avatar-selection img{
+   width: 50px;
+   margin: 1px;
+   cursor: pointer;
+}
+.btn-container{
+    background-image: url('/images/arcaea/b30.png');
+    background-size: auto;
+    background-repeat: repeat; 
+    filter: blur(20px);
+}
+.song-name{
+    width: 150px;
+    white-space: nowrap; /* 防止文字换行 */
+    overflow-x: scroll; /* 隐藏溢出的文字 */
+    text-overflow: ellipsis; /* 使用省略号表示溢出的文字 */
+}
+.grid-item h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.grid-item .song-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.grid-item .song-info .song-cover {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.grid-item .song-info .song-cover img{
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item .song-info .song-level {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.grid-item .song-info .play-ptt {
+    flex: 1;
+}
+
+.grid-item .player-score {
+    margin-top: 10px;
+}
+
+.info-bar{
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    font-size:x-large;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 10px;
+    margin-bottom: 0%;
+}
+.info{
+    min-width: 130px;
+}
+.username{
+    margin-left: 40px;
+    font-size:xx-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 25px;
+    max-width: 200px;
+    overflow-x: scroll;
+    white-space:nowrap;
+    cursor: pointer;
+}
+
+.spinner {
+    /* Size */
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    height: 4rem;
+    width: 4rem;
+    z-index: 9999;
+    margin: auto;
+    border: 6px solid #d1d5db;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spinner 800ms linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar {
+   height: 5px;
+}
+
+::-webkit-scrollbar:hover {
+   background-color: #7c7c7c;
+   border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4d4d4d;
+    border-radius: 2px;
+ }
+.rankptt{
+    position: relative;
+}
+
+.rankptt img{
+    position: relative;
+}
+
+.avatar #rank{
+    margin-left: -45px;
+    margin-bottom: -17px;
+    height: 60px;
+    width: 60px;
+}
+
+#ptt{
+    position: absolute;
+    margin-top: -38px; /* 调整文字在图片上的位置 */
+    margin-left: -51px; /* 调整文字在图片上的位置 */
+    padding: 5px 10px; /* 调整文字背景的内边距 */
+    font-size: 24px; /* 设置文字大小 */
+    color: #f1f1f1; /* 设置文字颜色 */
+    font-family: 'Exo-SemiBold', sans-serif;
+    -webkit-text-stroke: 0.3px black;
+    cursor: pointer;
+ }
+ @font-face {
+    font-family: 'Exo-SemiBold';
+    src: url('/font/Exo-SemiBold.ttf') format('truetype');
+ }
+
+ .datascore{
+    margin-left: -2px;
+    margin-right: 16px;
+ }
+ 
+
+
+
+
+
+

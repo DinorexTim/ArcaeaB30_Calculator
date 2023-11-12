@@ -1,0 +1,33 @@
+{
+  "name": "arcaeab30_calculator",
+  "version": "1.0.0",
+  "description": "b30 calculator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "b30",
+    "arc"
+  ],
+  "author": "DINOREX",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.20.2",
+    "csv-parser": "3.0.0",
+    "express": "latest",
+    "express-session": "1.17.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "js-yaml": "4.1.0",
+    "mysql2": "3.6.2",
+    "querystring": "0.2.1",
+    "sqlite3": "^5.1.6",
+    "ws": "8.14.1"
+  }
+}

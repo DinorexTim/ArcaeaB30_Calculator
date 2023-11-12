@@ -1,0 +1,16 @@
+# 数据库配置
+mysql:
+ enable: false
+ host: 'localhost'
+ port: 3306
+ user: 'root'
+ password: 'your_password'
+ database: 'arcaea'
+# sqlite
+sqlite:
+  enable: true
+# 服务器配置
+server:
+ host: "localhost"
+ port: 8081
+ location: "http://localhost:8081"

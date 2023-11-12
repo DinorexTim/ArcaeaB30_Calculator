@@ -1,0 +1,74 @@
+body{
+    background-color: #212a45; 
+    color: white;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/arcaea/b30.png');
+    background-size: auto;
+    background-repeat: repeat; 
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatbox{
+    width: 95%;
+    height: 500px;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 10px;
+}
+
+.option button{
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.interaction{
+    margin: auto;
+    width: 100%;
+    height: 87%;
+    border-radius: 10px;
+    background-color: rgba(46, 53, 85, 0.7);
+    overflow-y: scroll;
+    display: inline-block;
+}
+
+.usercontent{
+    margin: 15px;
+    margin-left: 76%;
+    padding: 10px;
+    width: 15%;
+    border-radius: 10px;
+    border: #cacaca solid 1px;
+    background-color: #212a45;
+}
+
+.replycontent{
+    margin: 12px;
+    margin-left: 18px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 10px;
+    border: #cacaca solid 1px;
+    background-color: #212a45;
+}
+
+.avatar{
+    cursor: pointer;
+}
+
+.avatar img{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 40px;
+    border-radius: 50%;
+    border:solid white 1px;
+}

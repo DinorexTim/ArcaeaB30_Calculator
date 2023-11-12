@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #24292e;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/arcaea/b30.png');
+    background-size: auto; /* 使图像覆盖整个容器 */
+    background-repeat: repeat; 
+    background-position: center center; /* 图像在容器中居中 */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-image: url('/images/arcaea/logo.png');
+    background-size:500px; 
+    background-repeat: no-repeat; /* 防止图像重复 */
+    background-position: center bottom; /* 图像在容器中居中 */
+    max-width: 100%;
+    min-height: 700px;
+  }
+
+  .header{
+    display: flex;
+    background-color: #3e3567;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background-image: url('/images/arcaea/b30.jpg');
+    background-size: auto;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    height: 10%;
+    min-height: 50px;
+    position: absolute;
+    top:0;
+  }
+
+  .header img{
+    height: 70%;
+    margin: 8px;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+  .header h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-size: 150%;
+  }
+
+  .login-box {
+    position: absolute;
+    background-color: rgba(46, 53, 85, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    /* height: 80%; */
+    color: white;
+    border: 1px solid rgb(199, 197, 197);
+  }
+
+  .login-box h2 {
+    color: white;
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .login-box input[type="text"],
+  .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(46, 53, 85, 0.8);
+    color: white;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .login-box input[type="text"]:hover,
+  .login-box input[type="password"]:hover{
+    background-color: rgba(72, 88, 162, 0.7);
+  }
+
+  .login-box input[type="submit"] {
+    background-color: rgba(46, 53, 85, 0.8);
+    color: #fff;
+    border: solid 1px rgb(206, 204, 204);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.1s ease-in-out;
+  }
+  .login-box input[type="submit"]:hover {
+    background-color: rgba(72, 88, 162, 0.7);
+  }
+  .login-box input::placeholder{
+    color: white;
+  }
+  button{
+    background-color: #ededed;
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .register{
+    cursor: pointer;
+  }
+
+  #isRegister{
+    cursor: pointer;
+  }

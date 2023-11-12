@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" href="/images/icon/icon.png" type="image/png">
+</head>
+<!-- <button class="switch" id="switch">Switch</button> -->
+<body class="body">
+  <div class="container">
+    <div class="header">
+      <img src="/images/icon/icon.png" alt=""><h3>Arcaea B30计算器</h3>
+    </div>
+    <div class="login-box">
+      <h2>Arcaea B30计算器</h2> 
+      <form method="POST" action="/login">
+        <input type="text" placeholder="账号" name="account" required>
+        <input type="password" placeholder="密码" name="password" required>
+        <input type="checkbox" id="isRegister" name="isRegister" value="register">
+        <label for="isRegister" class="register">新账号注册</label><br>
+        <input type="submit" value="确认">
+      </form>
+    </div>
+  </div>
+  <script src="/js/index.js"></script>
+</body>
+</html>

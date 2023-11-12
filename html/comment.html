@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaza</title>
+</head>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/comment.css">
+<link rel="icon" href="/images/icon/icon.png" type="image/png">
+<body>
+    <div class="header">
+        <h1>Plaza</h1>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn" id="getscore">成绩导入</button>
+        <button class="btn" id="b30">B30</button>
+        <button class="btn" id="AIsauce">AI酱</button>
+        <button class="btn" id="reload"><div class="presence-indicator"><div class="presence-indicator__indicator" id="indicator"></div></div>刷新</button>
+    </div>
+    <div class="container">
+        <div class="chatbox" id="chatbox">
+            <div class="interaction" id="interaction">
+                <div class="spinner" id="spinner"></div>
+            </div>
+            <div class="mailbox">
+                <textarea name="" id="comment" cols="30" rows="10" class="comment" placeholder="这里需要一条查重率为0的发言"></textarea>
+                <button id="send" class="btn">发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/comment.js"></script>
+</body>
+</html>

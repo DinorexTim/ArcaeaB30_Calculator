@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B30</title>
+</head>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/b30.css">
+<link rel="icon" href="/images/icon/icon.png" type="image/png">
+<body>
+    <div class="btn-container" id="btn-container">
+        <button class="btn" id="getscore">成绩导入</button>
+        <button class="btn" id="B30">B30</button>
+        <button class="btn" id="AIsauce">AI酱</button>
+        <button class="btn" id="logout">退出登录</button>
+        <button class="btn" id="export">导出B30</button>
+    </div>
+    <div class="spinner" id="spinner"></div>
+    <div id="capture">
+    <div class="header">
+        <div class="avatar">
+            <img src="/images/avatar/1.png" alt="" id="avatar">
+            <div class="rankptt">
+                <img src="/images/rank/1.png" alt="" id="rank">
+                <p id="ptt" contenteditable="true">00.00</p>
+            </div>
+        </div>
+        <p class="username" id="username" contenteditable="true"></p>
+        <div class="info-bar" id="info-bar" style="font-weight: bold;">
+            <div class="info" id="b30">B30</div>
+            <div class="info" id="r10">R10</div>
+        </div>
+    </div>
+    <div id="avatar-selection">
+    </div>
+    <div id="grid">
+       
+    </div>
+    </div>
+    <script src="/js/b30.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</body>
+</html>
