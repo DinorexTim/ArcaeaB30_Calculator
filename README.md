@@ -9,6 +9,7 @@
 - [x] 自选头像、用户名、PTT
 - [x] B30一键导出
 - [x] ~~复活AI酱~~（随机歌曲、推分建议、音游圣经、彩蛋）
+![images](images/Screenshots/AIchan.png)
 # 本地部署
 ## Node.js安装
 - 前往[nodejs官网](https://nodejs.org)安装Node.js
