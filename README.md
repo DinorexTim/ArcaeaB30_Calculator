@@ -3,7 +3,9 @@
 ## 功能
 - [x] 支持本地/公开查询
 - [x] 定数表查询
+![images](images/Screenshots/getscore.png)
 - [x] B30表格生成
+![images](images/Screenshots/B30.png)
 - [x] 自选头像、用户名、PTT
 - [x] B30一键导出
 - [x] ~~复活AI酱~~（随机歌曲、推分建议、音游圣经、彩蛋）
