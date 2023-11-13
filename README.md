@@ -23,6 +23,8 @@ npm install
 ```
 node server.js
 ```
+- 打开浏览器访问`http://localhost:8081`即可开始使用
+> 若无法正常启动多半是因为端口占用，修改`settings.yaml`的`port`与`location`为未被占用端口（如`port: 8888`，`location: http://localhost:8888`）。
 ## 配置文件说明（非必需）
 - 解压文件后进入工作区，使用文本编辑器打开`settings.yaml`，更改配置选项
 ```
