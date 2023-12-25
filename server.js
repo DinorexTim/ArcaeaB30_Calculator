@@ -74,7 +74,7 @@ app.use(session({
     cookie:{maxAge:1440*60*1000},
     resave: false,
     saveUninitialized: false
-  }));
+}));
 /********************MySQL数据库********************/
 let connectInfo;
 //配置本机mysql连接基本信息

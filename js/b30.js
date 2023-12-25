@@ -196,7 +196,7 @@ function calculateR10(){
     if(event.code=='Enter'){
         event.preventDefault();
         ptt.blur();
-        if(parseFloat(document.getElementById('ptt').innerText)<=0.00||parseFloat(document.getElementById('ptt').innerText)>=13.10){
+        if(parseFloat(document.getElementById('ptt').innerText)<=0.00||parseFloat(document.getElementById('ptt').innerText)>13.11){
             if(!localStorage.getItem("ptt")||localStorage.getItem("ptt")==""){
                 document.getElementById('ptt').innerText="00.00";
             }else{

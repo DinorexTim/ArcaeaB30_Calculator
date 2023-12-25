@@ -8,6 +8,7 @@ body {
     background-size: auto;
     background-repeat: repeat; 
     filter: blur(20px);
+    transition: filter ease 0.3s;
 }
 .grid-very-wide{
     display: grid;
@@ -99,6 +100,7 @@ body {
     background-size: auto;
     background-repeat: repeat; 
     filter: blur(20px);
+    transition: filter ease 0.3s;
 }
 .song-name{
     width: 150px;

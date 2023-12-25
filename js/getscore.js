@@ -97,7 +97,7 @@ async function calculateB30(){
                 "class":document.getElementById(`class${index}`).innerText,
                 "difficulty":parseFloat(document.getElementById(`difficulty${index}`).innerText),
                 "score":parseFloat(document.getElementById(`grade${index}`).value),
-                "playptt":parseFloat(playptt.toFixed(2))
+                "playptt":parseFloat(playptt.toFixed(3))
             }
         }
         B30.push(data);
