@@ -206,11 +206,12 @@ function calculateR10(){
             if(!localStorage.getItem("ptt")||localStorage.getItem("ptt")==""){
                 document.getElementById('ptt').innerText="00.00";
             }else{
-                document.getElementById('ptt').innerText=localStorage.getItem("ptt");
+                document.getElementById('ptt').innerText=parseFloat(localStorage.getItem("ptt")).toFixed(2).toString();
             }
             alert("下个游戏不要钱的");
             return;
         }
+        document.getElementById('ptt').innerText=parseFloat(document.getElementById('ptt').innerText).toFixed(2).toString();
         localStorage.setItem("ptt",document.getElementById('ptt').innerText);
         var r10=0;
         if(parseFloat(document.getElementById('ptt').innerText)>=13.00){
@@ -225,7 +226,7 @@ function calculateR10(){
         localStorage.setItem("rank",document.getElementById('rank').src);
         r10=(4*parseFloat(document.getElementById('ptt').innerText)-3*parseFloat(best30)).toFixed(3);
         localStorage.setItem("r10",r10);
-        document.getElementById('b30').innerText="B30 "+best30.toFixed(3);
+        document.getElementById('b30').innerText="B30 "+best30.toFixed(3).toString();
         document.getElementById('r10').innerText="R10 "+r10.toString();
     }
 }
