@@ -7,7 +7,7 @@ body {
     background-image: url('/images/arcaea/b30.png');
     background-size: auto;
     background-repeat: repeat; 
-    filter: blur(20px);
+    filter: blur(40px);
     transition: filter ease 0.3s;
 }
 .grid-very-wide{
