@@ -8,6 +8,7 @@ const avatarselection=document.getElementById('avatar-selection');
 
 var account="";
 var best30=0;
+var maxr10=0;
 var isshow=0;
 var num_of_avatar=77;
 getscore.addEventListener('click',()=>{
@@ -97,6 +98,9 @@ async function loadB30(){
                         `;
                     }else{
                         best30+=data[index].playptt;
+                        if(index<10){
+                            maxr10+=data[index].playptt;
+                        }
                         let style="";
                         let grade="";
                         let placeholder="";
@@ -145,13 +149,15 @@ async function loadB30(){
                     setTimeout(displayB30, 15);
                 }else{
                     document.getElementById('spinner').remove();
-                    best30=best30/30;
+                    best30/=30;
+                    maxr10/=10;
                     document.getElementById('b30').innerText="B30 "+best30.toFixed(3);
                     if(document.getElementById('ptt').innerText!=""&&document.getElementById('ptt').innerText!="00.00"){
                         var r10=0;
                         r10=(4*parseFloat(document.getElementById('ptt').innerText)-3*parseFloat(best30)).toFixed(3);
                         document.getElementById('b30').innerText="B30 "+best30.toFixed(3);
                         document.getElementById('r10').innerText="R10 "+r10.toString();
+                        document.getElementById('maxptt').innerText="MaxPtt "+(3*parseFloat(best30)/4+maxr10/4).toFixed(3).toString()
                     }
                     document.getElementById('btn-container').style.filter="blur(0px)";
                     document.getElementById('capture').style.filter="blur(0px)";
