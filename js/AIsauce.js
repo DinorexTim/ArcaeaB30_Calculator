@@ -102,7 +102,7 @@ randomsong.addEventListener('click',async()=>{
                     document.getElementById(`reply${dialogueID}`).innerHTML=temp;
                     interaction.scrollTop=interaction.scrollHeight;
                     index++;
-                    setTimeout(showText,20);
+                    setTimeout(showText,10);
                 }else{
                     document.getElementById(`egg${dialogueID}`).addEventListener('click',Egg);
                     dialogueID++;
@@ -140,7 +140,11 @@ suggestion.addEventListener('click',async()=>{
             function getRandomInteger(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
             }
-            if(data.length>=40){
+            let size_temp=0;
+            while(data[size_temp].playptt!=0){
+                size_temp++;
+            }
+            if(size_temp>=35){
                 reply=[
                     "似乎是个不错的选择，但不要推分过度，小心腱鞘炎哦！",
                     "或许能够帮助你提升潜力值，快去试试吧！",
@@ -193,7 +197,7 @@ suggestion.addEventListener('click',async()=>{
                         document.getElementById(`reply${dialogueID}`).innerHTML=temp;
                         interaction.scrollTop=interaction.scrollHeight;
                         index++;
-                        setTimeout(showText,20);
+                        setTimeout(showText,10);
                     }else{
                         document.getElementById(`egg${dialogueID}`).addEventListener('click',Egg);
                         dialogueID++;
@@ -239,7 +243,7 @@ bible.addEventListener('click',async()=>{
                     document.getElementById(`reply${dialogueID}`).innerHTML=temp;
                     interaction.scrollTop=interaction.scrollHeight;
                     index++;
-                    setTimeout(showText,20);
+                    setTimeout(showText,10);
                 }else{
                     document.getElementById(`egg${dialogueID}`).addEventListener('click',Egg);
                     dialogueID++;
@@ -272,7 +276,7 @@ async function loadDialogue(){
                 temp+=text.charAt(index);
                 document.getElementById(`reply${dialogueID}`).innerHTML=temp;
                 index++;
-                setTimeout(showText,20);
+                setTimeout(showText,10);
             }else{
                 document.getElementById(`egg${dialogueID}`).addEventListener('click',Egg);
                 dialogueID++;

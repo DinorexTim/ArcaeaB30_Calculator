@@ -10,42 +10,44 @@ body {
     filter: blur(40px);
     transition: filter ease 0.3s;
 }
+
 .grid-very-wide{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    margin: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin: 15px;
     justify-items: center
 }
 
 .grid-wide{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    margin: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin: 15px;
     justify-items: center
 }
 
 .grid-narrow{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin: 15px;
     justify-items: center
 }
 
 .grid-very-narrow{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6px;
+    margin: 15px;
     justify-items: center
 }
 
 .grid-item {
     border-radius: 20px;
     padding: 10px;
-    width: 147px;
+    width: 230px;
+    height: 150px;
 }
 
 .header{
@@ -68,10 +70,10 @@ body {
 } 
 
 #avatar{
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 #avatar.enlarged{
-    transform: scale(1.1)
+    transform: scale(1.05)
 }
 
 #avatar-selection{
@@ -103,11 +105,18 @@ body {
     transition: filter ease 0.3s;
 }
 .song-name{
-    width: 150px;
+    width: 230px;
     white-space: nowrap; /* 防止文字换行 */
     overflow-x: scroll; /* 隐藏溢出的文字 */
-    text-overflow: ellipsis; /* 使用省略号表示溢出的文字 */
+    text-overflow:clip; /* 使用省略号表示溢出的文字 */
 }
+
+.songname{
+    margin-left: 5px;
+    display: inline-block;
+    font-family: 'Exo-SemiBold';
+}
+
 .grid-item h2 {
     font-size: 18px;
     margin: 0;
@@ -115,18 +124,26 @@ body {
 
 .grid-item .song-info {
     display: flex;
-    justify-content: space-between;
     margin-top: 10px;
 }
 
 .grid-item .song-info .song-cover {
-    flex: 1;
-    margin-right: 10px;
+    width: 110px;
 }
 
 .grid-item .song-info .song-cover img{
-    height: 100%;
-    width: 100%;
+    width: 99%;
+    border-radius: 50%;
+    border: 1px solid white
+}
+
+.grid-item .song-info .play-ptt {
+    display: flex;
+    width: 99px;
+    border: 1px solid white;
+    border-radius: 10px;
+    justify-content: center;
+    font-family: 'Exo-SemiBold';
 }
 
 .grid-item .song-info .song-level {
@@ -134,12 +151,10 @@ body {
     margin-bottom: 20px;
 }
 
-.grid-item .song-info .play-ptt {
-    flex: 1;
-}
-
 .grid-item .player-score {
-    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .info-bar{
@@ -238,13 +253,19 @@ body {
  }
 
  .datascore{
-    margin-left: -2px;
-    margin-right: 16px;
+    font-size: x-large;
+    font-family: 'Exo-SemiBold';
  }
  
+.difficulty{
+    display: inline-block;
+    border: 1px solid white;
+    padding-left:4px;
+    padding-right:4px; 
+    border-radius: 20px;
+    font-family: 'Exo-SemiBold';
+}
 
-
-
-
-
-
+.graderank{
+    display: inline-block;
+}

@@ -82,18 +82,19 @@ async function loadB30(){
                     }
                     if(data[index].score==null||data[index].score==NaN){
                         B30Grid.innerHTML+=`
-                        <div class="grid-item">
+                            <div class="grid-item" style="background-color:#1f1e33;">
                             <div class="song-name">
-                            <h2></h2>
+                                <b>#616 </b>
+                                <div class="difficulty" style="background-color:#1f1e33;">Lr</div>
+                                <div class="songname">Guy-RESURRECTION</div>
                             </div>
                             <div class="song-info">
                                 <div class="song-cover"><img src="/images/guy/guyb30.jpg" alt=""></div>
-                                <div class="level-grade">
-                                    <div class="song-level">Level<br><b>114</b></div>
-                                    <div class="play-ptt">playptt<br><b>514</b></div>
+                                <div class="player-score">
+                                    <p class="datascore">1919810</p>
+                                    <div class="play-ptt" style="background-color:#1f1e33;">114→514</div>
                                 </div>
                             </div>
-                            <div class="player-score">Score  <b>1919810</b></div>
                         </div>
                         `;
                     }else{
@@ -102,11 +103,16 @@ async function loadB30(){
                             maxr10+=data[index].playptt;
                         }
                         let style="";
-                        let grade="";
+                        let diff="";
+                        let style_info=""
                         let placeholder="";
                         if(data[index].class=="FTR"){
+                            diff="FTR";
+                            style_info="background-color:#b231b2;"
                             style="background: linear-gradient(to top right,#b231b2,transparent);";
                         }else if(data[index].class=="BYD"){
+                            diff="BYD";      
+                            style_info="background-color:#c71111;"                      
                             style="background: linear-gradient(to top right, #ff0000, transparent);";
                         }
                         {
@@ -130,18 +136,19 @@ async function loadB30(){
                             placeholder+="&nbsp";
                         }
                         B30Grid.innerHTML+=`
-                        <div class="grid-item" style="${style}">
+                            <div class="grid-item" style="${style}">
                             <div class="song-name">
-                            <h2>#${index+1} ${data[index].name.slice(0,12)}</h2>
+                                <b>#${index+1} </b>
+                                <div class="difficulty" style=${style_info}>${diff}</div>
+                                <div class="songname">${data[index].name.slice(0,18)}</div>
                             </div>
                             <div class="song-info">
                                 <div class="song-cover"><img src="/images/Songcovers/${imagename}.jpg" alt=""></div>
-                                <div class="level-grade">
-                                    <div class="song-level">Level<br><b>${data[index].difficulty}</b></div>
-                                    <div class="play-ptt">playptt<br><b>${data[index].playptt}</b></div>
+                                <div class="player-score">
+                                    <p class="datascore">${data[index].score}</p>
+                                    <div class="play-ptt" style="${style_info}">${data[index].difficulty}→${data[index].playptt}</div>
                                 </div>
                             </div>
-                            <div class="player-score">Pts&nbsp;<b class="datascore">${data[index].score}${placeholder}</b><b class="graderank">${grade}</b></div>
                         </div>
                         `;
                     }
@@ -169,18 +176,19 @@ async function loadB30(){
             function displayB30(){
                 if(index<30){
                     B30Grid.innerHTML+=`
-                    <div class="grid-item">
+                        <div class="grid-item" style="background-color:#1f1e33;">
                         <div class="song-name">
-                        <h2></h2>
+                            <b>#616 </b>
+                            <div class="difficulty" style="background-color:#1f1e33;">Lr</div>
+                            <div class="songname">Guy-RESURRECTION</div>
                         </div>
                         <div class="song-info">
                             <div class="song-cover"><img src="/images/guy/guyb30.jpg" alt=""></div>
-                            <div class="level-grade">
-                                <div class="song-level">Level<br><b>114</b></div>
-                                <div class="play-ptt">playptt<br><b>514</b></div>
+                            <div class="player-score">
+                                <p class="datascore">1919810</p>
+                                <div class="play-ptt" style="background-color:#1f1e33;">114→514</div>
                             </div>
                         </div>
-                        <div class="player-score">Score  <b>1919810</b></div>
                     </div>
                     `;
                     index++;
@@ -248,25 +256,25 @@ async function selectavatar(){
 }
 function checkScreenWidth() {
     const screenWidth = window.innerWidth;
-    if(screenWidth>=1280){
+    if(screenWidth >= 1280){
         B30Grid.classList.remove('grid-narrow');
         B30Grid.classList.remove('grid-very-narrow');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.add('grid-very-wide');
-    }else if(screenWidth >= 960){ 
+    }else if(screenWidth >= 880){ 
+        B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-narrow');
         B30Grid.classList.remove('grid-very-narrow');
-        B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.add('grid-wide');
-    }else if(screenWidth >= 576){ 
+    }else if(screenWidth >= 577){ 
+        B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.remove('grid-very-narrow');
-        B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.add('grid-narrow');
     }else{
+        B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.remove('grid-narrow');
-        B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.add('grid-very-narrow');
     }
 }
