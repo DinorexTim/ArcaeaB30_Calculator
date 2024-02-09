@@ -261,12 +261,12 @@ function checkScreenWidth() {
         B30Grid.classList.remove('grid-very-narrow');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.add('grid-very-wide');
-    }else if(screenWidth >= 880){ 
+    }else if(screenWidth >= 780){ 
         B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-narrow');
         B30Grid.classList.remove('grid-very-narrow');
         B30Grid.classList.add('grid-wide');
-    }else if(screenWidth >= 577){ 
+    }else if(screenWidth >= 520){ 
         B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.remove('grid-very-narrow');
