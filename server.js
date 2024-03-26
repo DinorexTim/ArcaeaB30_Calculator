@@ -408,10 +408,11 @@ app.post('/uploadGrade',(req,res)=>{
       const deleteStatement = connectInfo.prepare('DELETE FROM grade WHERE account = ?');
       const nameToDelete = `${body.account}`;
       deleteStatement.run(nameToDelete);
-      deleteStatement.finalize();
-      const insertStatement = connectInfo.prepare('INSERT INTO grade (account,grade) VALUES (?,?)');
-      insertStatement.run(`${body.account}`,`${body.b30}`);
-      insertStatement.finalize();
+      deleteStatement.finalize(()=>{
+        const insertStatement = connectInfo.prepare('INSERT INTO grade (account,grade) VALUES (?,?)');
+        insertStatement.run(`${body.account}`,`${body.b30}`);
+        insertStatement.finalize();
+      });
     }else if(settings.mysql.enable){
       connectInfo.query(sql_delete,(err,result,field)=>{
         if(err){
