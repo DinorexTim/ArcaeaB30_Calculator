@@ -324,6 +324,14 @@ document.getElementById('avatar').addEventListener('mouseover',()=>{
 document.getElementById('avatar').addEventListener('mouseleave',()=>{
     document.getElementById('avatar').classList.toggle('enlarged');
 });
+document.getElementById('menu').addEventListener('click',()=>{
+    let btn_container = document.getElementById('btn-container');
+    if(btn_container.style.left=='' || btn_container.style.left=='-130px'){
+        btn_container.style.left='0px';
+    }else{
+        btn_container.style.left='-130px';
+    }
+});
 window.onload=async ()=>{ 
     if(!localStorage.getItem("r10")||localStorage.getItem("r10")=="NaN"){
         document.getElementById('r10').innerText="R10";
