@@ -17,7 +17,7 @@
     <summary>点击展示</summary>
  
 ![images](./images/Screenshots/getscore.png)
-![images](./images/Screenshots/b30.png)
+![images](./images/Screenshots/B30shot.png)
 ![images](./images/Screenshots/AIchan.png)
 
 </details>
