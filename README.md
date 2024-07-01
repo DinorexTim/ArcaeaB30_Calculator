@@ -91,7 +91,7 @@ Arghena,0.0,0.0,11.3,
 ## AI酱
 - 在`/data/songs.yaml`添加歌曲推荐回答
 - 在`/data/bible.yaml`添加圣经
-- 
+
 > 填写格式均参考文件内部
 
 

@@ -99,21 +99,17 @@ body {
    cursor: pointer;
 }
 .btn-container{
-    /* display: none; */
     position: absolute;
     display: flex;
     width: 130px;
-    padding-top: 30px;
+    padding-top: 45px;
     flex-direction: column;
-    height: 100%;
     left: -130px;
     background-image: url('/images/arcaea/b30.png');
-    background-size: auto;
-    background-repeat: repeat; 
-    filter: blur(20px);
-    transition: filter ease 0.3s;
     z-index: 888;
     transition: left ease 0.2s;
+    border-radius: 10px;
+    margin-top: 0px;
 }
 .song-name{
     width: 230px;
