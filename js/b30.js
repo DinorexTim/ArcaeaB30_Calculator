@@ -256,7 +256,13 @@ async function selectavatar(){
 }
 function checkScreenWidth() {
     const screenWidth = window.innerWidth;
-    if(screenWidth >= 1100){
+    if(screenWidth >= 1380){
+        B30Grid.classList.remove('grid-narrow');
+        B30Grid.classList.remove('grid-very-narrow');
+        B30Grid.classList.remove('grid-wide');
+        B30Grid.classList.remove('grid-very-wide');
+        B30Grid.classList.add('grid-very-very-wide');
+    }else if(screenWidth >= 1100){
         B30Grid.classList.remove('grid-narrow');
         B30Grid.classList.remove('grid-very-narrow');
         B30Grid.classList.remove('grid-wide');
@@ -265,16 +271,19 @@ function checkScreenWidth() {
         B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-narrow');
         B30Grid.classList.remove('grid-very-narrow');
+        B30Grid.classList.remove('grid-very-very-wide');
         B30Grid.classList.add('grid-wide');
     }else if(screenWidth >= 500){ 
         B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.remove('grid-very-narrow');
+        B30Grid.classList.remove('grid-very-very-wide');
         B30Grid.classList.add('grid-narrow');
     }else{
         B30Grid.classList.remove('grid-very-wide');
         B30Grid.classList.remove('grid-wide');
         B30Grid.classList.remove('grid-narrow');
+        B30Grid.classList.remove('grid-very-very-wide');
         B30Grid.classList.add('grid-very-narrow');
     }
 }

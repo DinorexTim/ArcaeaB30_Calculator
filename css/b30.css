@@ -11,6 +11,14 @@ body {
     transition: filter ease 0.3s;
 }
 
+.grid-very-very-wide{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    margin: 15px;
+    justify-items: center
+}
+
 .grid-very-wide{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
